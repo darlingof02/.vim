@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/Users/pengyizhuang/Code/data_structure_practice/Array'
+let g:netrw_dirhist_0='/Users/pengyizhuang/.vim/plugged'
+let g:netrw_dirhist_9='/Users/pengyizhuang'
+let g:netrw_dirhist_8='/Users/pengyizhuang/Library/Mobile Documents/com~apple~CloudDocs/Downloads'
+let g:netrw_dirhist_7='/Users/pengyizhuang/Library/Mobile Documents/com~apple~CloudDocs'
+let g:netrw_dirhist_6='/Users/pengyizhuang/Library/Mobile Documents'
+let g:netrw_dirhist_5='/Users/pengyizhuang/Library/Mobile Documents/com~apple~CloudDocs'
+let g:netrw_dirhist_4='/Users/pengyizhuang/Library/Mobile Documents/com~apple~CloudDocs/Downloads'
+let g:netrw_dirhist_3='/Users/pengyizhuang/Downloads'
+let g:netrw_dirhist_2='/Users/pengyizhuang/OneDrive/留学准备/GRE准备（语言篇）/GRE 写作'

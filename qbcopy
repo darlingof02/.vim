@@ -1,0 +1,63 @@
+set nocompatible "避免和vi的冲突
+filetype on "检测文件类型
+filetype indent on "为特定文件类型载入相关缩进文件
+filetype plugin on "允许插件
+filetype plugin indent on
+
+let mapleader=" "
+syntax on "打开语法高亮
+set number "打开行号显示 
+set norelativenumber "关闭相对行号显示 
+set cursorline "突出显示当前编辑行
+set wrap "允许代码换行显示
+set showcmd "输入的命令显示出来
+set wildmenu "使用backspace时，正常处理indent，eol，start等
+set hlsearch "高亮显示搜索结果
+exec "nohlsearch"
+set incsearch 
+set ignorecase "忽略大小写搜索
+set smartcase "在有一个或以上的大写字母时，大小写敏感
+set mouse=a "可以用鼠标指挥光标（建议关闭
+set encoding=utf-8 "编码格式
+let &t_ut='' "解决终端配色方案异常
+set expandtab "设置tab键缩进
+set tabstop=2 "设置tab键缩进为2格
+set shiftwidth=2 "设置<<和>>命令移动宽度为2
+set softtabstop=2 "设置backspace可删除两格
+set foldmethod=indent "设置折叠方式
+set laststatus=2 "显示状态栏
+set autochdir "自动切换到当前目录为当前文件所在的目录
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+" Better backspace
+set backspace=indent,eol,start
+
+"shift + s 保存文件
+"shift + q 退出vimmap S :w<CR> 
+map Q :q<CR> 
+
+"s + i分屏，光标在右
+"s + n分屏，光标在左map si :set splitright<CR>:vsplit<CR>  
+"s + u分屏，光标在上map sn :set nosplitright<CR>:vsplit<CR>
+"s + e分屏，光标在下map su :set nosplitbelow<CR>:split<CR> 
+map se :set splitbelow<CR>split<CR>    
+
+"方向键上键，控制分屏大小
+"方向键下键，控制分屏大小map <up> :res +5<CR>              
+"方向键左键，控制分屏大小map <down> :res -5<CR>            
+"方向键右键，控制分屏大小map <left> :vertical resize-5<CR> 
+map <right> :vertical resize+5<CR>
+
+"空格 + l/k/h/j 控制光标在分屏间切换
+map <LEADER>l <C-w>l
+map <LEADER>k <C-w>k
+map <LEADER>h <C-w>h
+map <LEADER>j <C-w>j
+
+"打开新标签
+map tu :tabe<CR> 
+
+"shift + u 重做撤销
+map U <C-r> 
+
+"空格 + 回车 取消搜索高亮显示
+noremap <LEADER><CR> :nohlsearch<CR> 
